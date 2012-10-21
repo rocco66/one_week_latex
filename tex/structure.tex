@@ -1,7 +1,5 @@
 \documentclass[10pt]{beamer}
 
-% \includeonly{tex/commands}
-
 \usepackage{mathtools}
 \usepackage{minted}
 \usepackage[utf8x]{inputenc}
@@ -29,7 +27,35 @@
 \include{tex/syntax}
 
 \section{Структура}
-\include{tex/commands}
+\begin{frame}[fragile]{Основные команды}
+  \begin{itemize}
+    \item Класс документа (article, report, beamer)
+      \begin{minted}{latex}
+        \documentclass[options]{class}
+      \end{minted}
+    \pause  
+    \item Используемые пакеты 
+      \begin{minted}{latex}
+        \usepackage{mathtools}
+        \usepackage{minted}
+        \usepackage[utf8x]{inputenc}
+        \usepackage[russian]{babel}
+      \end{minted}
+    \pause  
+    \item Опции, настройки, подключаемые файлы
+      \begin{minted}{latex}
+        \usetheme{Antibes}
+        \includeonly{filename1,filename2,...}
+      \end{minted}
+    \pause  
+    \item Документ
+      \begin{minted}{latex}
+        \begin{document}
+          ...
+        \end{document}
+      \end{minted}
+  \end{itemize}
+\end{frame}
 
 \begin{frame}[fragile]{Структура проекта. Из Wiki}
   \begin{itemize}
