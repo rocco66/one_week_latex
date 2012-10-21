@@ -1,0 +1,148 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{mathtools}
+\usepackage{minted}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[]{textpos}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{sidebar width left=1cm}
+\usecolortheme{sidebartab}
+
+\usetheme{Berkeley}
+
+\title{Одна неделя с \LaTeX}
+\author[Митрошин Максим]{Митрошин Максим \\ \texttt{mitroshin@selectel.ru}}
+\date{\today}
+\institute{Selectel}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\section{Синтаксис}
+
+\begin{frame}[fragile]{Синтаксис}
+  \begin{itemize}
+    \item Text
+      \begin{minted}{latex}
+        Foo Bar Buz
+      \end{minted}
+    \pause  
+    \item Command
+      \begin{minted}{latex}
+        \LaTeX
+      \end{minted}
+    \pause  
+    \item Enviroment
+      \begin{minted}{latex}
+        \begin{itemize}
+          \item The first item
+          \item The second item
+        \end{itemize}
+      \end{minted}
+    \pause  
+    \item Comment
+      \begin{minted}{latex}
+        % TODO(Mitroshin): watch Firefly TV
+      \end{minted}
+  \end{itemize}
+\end{frame}
+
+\section{Структура}
+
+\begin{frame}[fragile]{Основные команды}
+  \begin{itemize}
+    \item Класс документа (article, report, beamer)
+      \begin{minted}{latex}
+        \documentclass[options]{class}
+      \end{minted}
+    \pause  
+    \item Используемые пакеты 
+      \begin{minted}{latex}
+        \usepackage{mathtools}
+        \usepackage{minted}
+        \usepackage[utf8x]{inputenc}
+        \usepackage[russian]{babel}
+      \end{minted}
+    \pause  
+    \item Опции, настройки, подключаемые файлы
+      \begin{minted}{latex}
+        \usetheme{Antibes}
+        \includeonly{filename1,filename2,...}
+      \end{minted}
+    \pause  
+    \item Документ
+      \begin{minted}{latex}
+        \begin{document}
+          ...
+        \end{document}
+      \end{minted}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Структура проекта. Из Wiki}
+  \begin{itemize}
+    \item Корневой документ
+      \begin{minted}{bash}
+        ./document.tex
+      \end{minted}
+    \pause  
+    \item Пакет проекта
+      \begin{minted}{bash}
+        ./mystyle.sty
+      \end{minted}
+    \pause  
+    \item Документы для глав/секций/слайдов
+      \begin{minted}{bash}
+        ./tex/
+      \end{minted}
+    \pause  
+    \item Изображения
+      \begin{minted}{bash}
+        ./img/
+      \end{minted}
+  \end{itemize}
+\end{frame}
+
+\section{Прикладные мелочи}
+
+\begin{frame}[fragile]{Математические формулы}
+  \begin{flushleft}
+    \Large
+    Процесс спадания звуковой энергии
+    \begin{equation*}
+      e(nt_{cp}) = \varepsilon_0 \exp\Bigg[ \frac{c_{3B} S ln(1 -
+        \alpha)}{4V}t \Bigg]
+    \end{equation*}
+  \end{flushleft}
+  \pause
+  \begin{minted}{latex}
+    \begin{equation*}
+      e(nt_{cp}) = \varepsilon_0  * \exp
+      \Bigg[
+      \frac{c_{3B} * S * ln(1 -\alpha)} {4 * V} * t
+      \Bigg]
+    \end{equation*}
+  \end{minted}
+\end{frame}
+
+\section[Выводы]{Что я вынес для себя плохого и хорошего}
+
+\begin{frame}{Раздражающие недостатки}
+  баги при ошибках
+\end{frame}
+
+\begin{frame}{Раздражающие недостатки}
+  Вопросы?
+\end{frame}
+
+
+\end{document}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
