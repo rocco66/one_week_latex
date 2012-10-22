@@ -1,49 +1,66 @@
 \begin{frame}[fragile]{Преамбула}
   \begin{itemize}
     \item Класс документа (article, report, beamer)
-      \begin{minted}{latex}
+      \begin{latexcode}
         \documentclass[options]{class}
-      \end{minted}
+      \end{latexcode}
     \pause  
     \item Используемые пакеты 
-      \begin{minted}{latex}
+      \begin{latexcode}
         \usepackage{mathtools}
         \usepackage{minted}
         \usepackage[utf8x]{inputenc}
         \usepackage[russian]{babel}
-      \end{minted}
+      \end{latexcode}
     \pause  
     \item Опции, настройки, подключаемые файлы
-      \begin{minted}{latex}
+      \begin{latexcode}
         \usetheme{Antibes}
         \includeonly{filename1,filename2,...}
-      \end{minted}
+      \end{latexcode}
     \pause  
     \item Документ
-      \begin{minted}{latex}
+      \begin{latexcode}
         \begin{document}
           ...
         \end{document}
-      \end{minted}
+      \end{latexcode}
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{Документ}
-
   \begin{itemize}
     \item Форматирование текста
-      \onslide<1>
-      \begin{minted}{latex}
+      \begin{latexcode}
         \Large \LaTeX
-      \end{minted}
-      \onslide+<2->{123}
-    \onslide+<3->
+      \end{latexcode}
+    \pause
     \item Списки
-    \onslide+<4->
+      \begin{latexcode}
+        \begin{itemize}
+          \item The Highly Responsive to Prayers
+          \item The Story of Eastern Wonderland
+        \end{itemize}
+      \end{latexcode}      
+    \pause  
     \item Пони
-    \onslide+<5->
-    \item Документ
+      \begin{latexcode}
+        \includegraphics[scale=0.1]{img/Derpy_hooves}
+      \end{latexcode}
+    \pause  
   \end{itemize}
-
 \end{frame}
 
+\begin{frame}[fragile]{Документ - результат}
+  \begin{itemize}
+    \item Форматирование текста
+        {\Large \LaTeX}
+    \item Списки
+      \begin{itemize}
+        \item The Highly Responsive to Prayers
+        \item The Story of Eastern Wonderland
+      \end{itemize}
+    \item Пони
+      \includegraphics[scale=0.1]{img/Derpy_hooves}
+  \end{itemize}
+\end{frame}

@@ -1,6 +1,6 @@
 \documentclass[10pt]{beamer}
 
-\includeonly{tex/commands}
+\includeonly{tex/text_format}
 
 \usepackage{one_week_helloworld}
 
@@ -24,49 +24,17 @@
 \section{Синтаксис}
 \include{tex/syntax}
 
-\section{Основные команды}
+\section{Команды}
 \include{tex/commands}
+\include{tex/math}
 
 \section{Структура проекта}
 \include{tex/project}
-
-\section{Прикладные мелочи}
-
-\include{tex/math}
-
-\begin{frame}[fragile]{Форматирование текста}
-  загибающийся текст
-\end{frame}
-
-\begin{frame}[fragile]{Создание своих команд}
-  Отрисовка кода + beamer
-\end{frame}
+% \include{tex/text_format}
+% \include{tex/beamer_minted}
 
 \section{Впечатления и выводы}
-
-\begin{frame}{Раздражающие недостатки}
-  баги при ошибках
-  2(3?) раза выполнять одну и ту же команду? здравствуй bibtex 
-  магия, много магии - нужно использовать один пакет чтобы не крашился другой 
-  
-  пример - overlay(beamer) + itemize!?
-  
-\end{frame}
-
-\begin{frame}{Не осилил}
-  \begin{itemize}
-    \item Симпатичную анимацию
-    \item Импорт файлов
-  \end{itemize}  
-\end{frame}
-
-\begin{frame}{Emacs}
-  сюда скриншотик
-\end{frame}
-
-\begin{frame}{Что использовалось в этой презентации}
-  include - время компилляции  
-\end{frame}
+\include{tex/results}
 
 \begin{frame}{Вопросы?}
   Вопросы?
