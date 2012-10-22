@@ -1,12 +1,8 @@
 \documentclass[10pt]{beamer}
 
-% \includeonly{tex/commands}
+\includeonly{tex/commands}
 
-\usepackage{mathtools}
-\usepackage{minted}
-\usepackage[utf8x]{inputenc}
-\usepackage[russian]{babel}
-\usepackage[]{textpos}
+\usepackage{one_week_helloworld}
 
 \setbeamertemplate{navigation symbols}{}
 \setbeamersize{sidebar width left=1cm}
@@ -15,7 +11,7 @@
 \usetheme{Berkeley}
 
 \title{Одна неделя с \LaTeX}
-\author[Митрошин Максим]{Митрошин Максим \\ \texttt{mitroshin@selectel.ru}}
+\author[Митрошин Максим]{Митрошин Максим \\ \texttt{\href{mailto:mitroshin@selectel.ru}{mitroshin@selectel.ru}}}
 \date{\today}
 \institute{Selectel}
 
@@ -28,76 +24,52 @@
 \section{Синтаксис}
 \include{tex/syntax}
 
-\section{Структура}
+\section{Основные команды}
 \include{tex/commands}
 
-\begin{frame}[fragile]{Структура проекта. Из Wiki}
-  \begin{itemize}
-    \item Корневой документ
-      \begin{minted}{bash}
-        ./document.tex
-      \end{minted}
-    \pause  
-    \item Пакет проекта
-      \begin{minted}{bash}
-        ./mystyle.sty
-      \end{minted}
-    \pause  
-    \item Документы для глав/секций/слайдов
-      \begin{minted}{bash}
-        ./tex/
-      \end{minted}
-    \pause  
-    \item Изображения
-      \begin{minted}{bash}
-        ./img/
-      \end{minted}
-  \end{itemize}
-\end{frame}
+\section{Структура проекта}
+\include{tex/project}
 
 \section{Прикладные мелочи}
 
-\begin{frame}[fragile]{Математические формулы}
-  \begin{flushleft}
-    \Large
-    Процесс спадания звуковой энергии
-    \begin{equation*}
-      e(nt_{cp}) = \varepsilon_0 \exp\Bigg[ \frac{c_{3B} S ln(1 -
-        \alpha)}{4V}t \Bigg]
-    \end{equation*}
-  \end{flushleft}
-  \pause
-  \begin{minted}{latex}
-    \begin{equation*}
-      e(nt_{cp}) = \varepsilon_0  * \exp
-      \Bigg[
-      \frac{c_{3B} * S * ln(1 -\alpha)} {4 * V} * t
-      \Bigg]
-    \end{equation*}
-  \end{minted}
-\end{frame}
+\include{tex/math}
 
 \begin{frame}[fragile]{Форматирование текста}
   загибающийся текст
 \end{frame}
 
 \begin{frame}[fragile]{Создание своих команд}
-  Отрисовка кода
+  Отрисовка кода + beamer
 \end{frame}
 
-\section[Выводы]{Что я вынес для себя плохого и хорошего}
+\section{Впечатления и выводы}
 
 \begin{frame}{Раздражающие недостатки}
   баги при ошибках
+  2(3?) раза выполнять одну и ту же команду? здравствуй bibtex 
+  магия, много магии - нужно использовать один пакет чтобы не крашился другой 
+  
+  пример - overlay(beamer) + itemize!?
+  
 \end{frame}
 
-\begin{frame}{Раздражающие недостатки}
+\begin{frame}{Не осилил}
+  \begin{itemize}
+    \item Симпатичную анимацию
+    \item Импорт файлов
+  \end{itemize}  
+\end{frame}
+
+\begin{frame}{Emacs}
+  сюда скриншотик
+\end{frame}
+
+\begin{frame}{Что использовалось в этой презентации}
+  include - время компилляции  
+\end{frame}
+
+\begin{frame}{Вопросы?}
   Вопросы?
 \end{frame}
 
-
 \end{document}
-%%% Local Variables: 
-%%% mode: latex
-%%% TeX-master: t
-%%% End: 
