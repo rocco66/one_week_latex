@@ -6,4 +6,3 @@ all:
 	set TEXINPUTS = $(SUBDIR)
 	$(LATEX) -shell-escape $(ROOT_DOCUMENT)
 
-
