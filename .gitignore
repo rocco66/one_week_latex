@@ -1,0 +1,11 @@
+auto/
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.pvg
+*.vrb
+*.log
+*.pyg
